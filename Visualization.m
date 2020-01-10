@@ -145,59 +145,48 @@ mean_C=[mean(C1),mean(C2),mean(C3),mean(C4),mean(C5),mean(C6),mean(C7),mean(C8),
 mean_D=[mean(D1),mean(D2),mean(D3),mean(D4),mean(D5),mean(D6),mean(D7),mean(D8),mean(D9),mean(D10),mean(D11),mean(D12),mean(D13)];
 
 % Error bounds
-sigma_3D_1=sqrt(var(V1,1)+var(D1,1)+var(C1,1));
-sigma_3D_2=sqrt(var(V2,1)+var(D2,1)+var(C2,1));
-sigma_3D_3=sqrt(var(V3,1)+var(D3,1)+var(C3,1));
-sigma_3D_4=sqrt(var(V4,1)+var(D4,1)+var(C4,1));
-sigma_3D_5=sqrt(var(V5,1)+var(D5,1)+var(C5,1));
-sigma_3D_6=sqrt(var(V6,1)+var(D6,1)+var(C6,1));
-sigma_3D_7=sqrt(var(V7,1)+var(D7,1)+var(C7,1));
-sigma_3D_8=sqrt(var(V8,1)+var(D8,1)+var(C8,1));
-sigma_3D_9=sqrt(var(V9,1)+var(D9,1)+var(C9,1));
-sigma_3D_10=sqrt(var(V10,1)+var(D10,1)+var(C10,1));
-sigma_3D_11=sqrt(var(V11,1)+var(D11,1)+var(C11,1));
-sigma_3D_12=sqrt(var(V12,1)+var(D12,1)+var(C12,1));
-sigma_3D_13=sqrt(var(V13,1)+var(D13,1)+var(C13,1));
 
-sigma_V_1=2*sqrt(var(V1,1));
-sigma_D_1=2*sqrt(var(D1,1));
-sigma_C_1=2*sqrt(var(C1,1));
-sigma_V_2=2*sqrt(var(V2,1));
-sigma_D_2=2*sqrt(var(D2,1));
-sigma_C_2=2*sqrt(var(C2,1));
-sigma_V_3=2*sqrt(var(V3,1));
-sigma_D_3=2*sqrt(var(D3,1));
-sigma_C_3=2*sqrt(var(C3,1));
-sigma_V_4=2*sqrt(var(V4,1));
-sigma_D_4=2*sqrt(var(D4,1));
-sigma_C_4=2*sqrt(var(C4,1));
-sigma_V_5=2*sqrt(var(V5,1));
-sigma_D_5=2*sqrt(var(D5,1));
-sigma_C_5=2*sqrt(var(C5,1));
-sigma_V_6=2*sqrt(var(V6,1));
-sigma_D_6=2*sqrt(var(D6,1));
-sigma_C_6=2*sqrt(var(C6,1));
-sigma_V_7=2*sqrt(var(V7,1));
-sigma_D_7=2*sqrt(var(D7,1));
-sigma_C_7=2*sqrt(var(C7,1));
-sigma_V_8=2*sqrt(var(V8,1));
-sigma_D_8=2*sqrt(var(D8,1));
-sigma_C_8=2*sqrt(var(C8,1));
-sigma_V_9=2*sqrt(var(V9,1));
-sigma_D_9=2*sqrt(var(D9,1));
-sigma_C_9=2*sqrt(var(C9,1));
-sigma_V_10=2*sqrt(var(V10,1));
-sigma_D_10=2*sqrt(var(D10,1));
-sigma_C_10=2*sqrt(var(C10,1));
-sigma_V_11=2*sqrt(var(V11,1));
-sigma_D_11=2*sqrt(var(D11,1));
-sigma_C_11=2*sqrt(var(C11,1));
-sigma_V_12=2*sqrt(var(V12,1));
-sigma_D_12=2*sqrt(var(D12,1));
-sigma_C_12=2*sqrt(var(C12,1));
-sigma_V_13=2*sqrt(var(V13,1));
-sigma_D_13=2*sqrt(var(D13,1));
-sigma_C_13=2*sqrt(var(C13,1));
+sigmaV_1=sqrt(var(V1,1));
+sigmaD_1=sqrt(var(D1,1));
+sigmaC_1=sqrt(var(C1,1));
+sigmaV_2=sqrt(var(V2,1));
+sigmaD_2=sqrt(var(D2,1));
+sigmaC_2=sqrt(var(C2,1));
+sigmaV_3=sqrt(var(V3,1));
+sigmaD_3=sqrt(var(D3,1));
+sigmaC_3=sqrt(var(C3,1));
+sigmaV_4=sqrt(var(V4,1));
+sigmaD_4=sqrt(var(D4,1));
+sigmaC_4=sqrt(var(C4,1));
+sigmaV_5=sqrt(var(V5,1));
+sigmaD_5=sqrt(var(D5,1));
+sigmaC_5=sqrt(var(C5,1));
+sigmaV_6=sqrt(var(V6,1));
+sigmaD_6=sqrt(var(D6,1));
+sigmaC_6=sqrt(var(C6,1));
+sigmaV_7=sqrt(var(V7,1));
+sigmaD_7=sqrt(var(D7,1));
+sigmaC_7=sqrt(var(C7,1));
+sigmaV_8=sqrt(var(V8,1));
+sigmaD_8=sqrt(var(D8,1));
+sigmaC_8=sqrt(var(C8,1));
+sigmaV_9=sqrt(var(V9,1));
+sigmaD_9=sqrt(var(D9,1));
+sigmaC_9=sqrt(var(C9,1));
+sigmaV_10=sqrt(var(V10,1));
+sigmaD_10=sqrt(var(D10,1));
+sigmaC_10=sqrt(var(C10,1));
+sigmaV_11=sqrt(var(V11,1));
+sigmaD_11=sqrt(var(D11,1));
+sigmaC_11=sqrt(var(C11,1));
+sigmaV_12=sqrt(var(V12,1));
+sigmaD_12=sqrt(var(D12,1));
+sigmaC_12=sqrt(var(C12,1));
+sigmaV_13=sqrt(var(V13,1));
+sigmaD_13=sqrt(var(D13,1));
+sigmaC_13=sqrt(var(C13,1));
+
+[x,y,z] = sphere(150);
 
 figure
 hold on
@@ -229,37 +218,37 @@ scatter3(V12,D12,C12,'o','MarkerEdgeColor','black','MarkerFaceColor','red');
 hold on
 scatter3(V13,D13,C13,'o','MarkerEdgeColor','black','MarkerFaceColor','red');
 hold on
-hSurface=surf(sigma_V_1*(x)+mean_V(1),sigma_D_1*(y)+mean_D(1),sigma_C_1*(z)+mean_C(1));
+hSurface=surf(3*sigmaV_1*(x)+mean_V(1),3*sigmaD_1*(y)+mean_D(1),3*sigmaC_1*(z)+mean_C(1));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_2*(x)+mean_V(2),sigma_D_2*(y)+mean_D(2),sigma_C_2*(z)+mean_C(2));
+hSurface=surf(3*sigmaV_2*(x)+mean_V(2),3*sigmaD_2*(y)+mean_D(2),3*sigmaC_2*(z)+mean_C(2));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_3*(x)+mean_V(3),sigma_D_3*(y)+mean_D(3),sigma_C_3*(z)+mean_C(3));
+hSurface=surf(3*sigmaV_3*(x)+mean_V(3),3*sigmaD_3*(y)+mean_D(3),3*sigmaC_3*(z)+mean_C(3));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_4*(x)+mean_V(4),sigma_D_4*(y)+mean_D(4),sigma_C_4*(z)+mean_C(4));
+hSurface=surf(3*sigmaV_4*(x)+mean_V(4),3*sigmaD_4*(y)+mean_D(4),3*sigmaC_4*(z)+mean_C(4));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_5*(x)+mean_V(5),sigma_D_5*(y)+mean_D(5),sigma_C_5*(z)+mean_C(5));
+hSurface=surf(3*sigmaV_5*(x)+mean_V(5),3*sigmaD_5*(y)+mean_D(5),3*sigmaC_5*(z)+mean_C(5));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_6*(x)+mean_V(6),sigma_D_6*(y)+mean_D(6),sigma_C_6*(z)+mean_C(6));
+hSurface=surf(3*sigmaV_6*(x)+mean_V(6),3*sigmaD_6*(y)+mean_D(6),3*sigmaC_6*(z)+mean_C(6));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_7*(x)+mean_V(7),sigma_D_7*(y)+mean_D(7),sigma_C_7*(z)+mean_C(7));
+hSurface=surf(3*sigmaV_7*(x)+mean_V(7),3*sigmaD_7*(y)+mean_D(7),3*sigmaC_7*(z)+mean_C(7));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_8*(x)+mean_V(8),sigma_D_8*(y)+mean_D(8),sigma_C_8*(z)+mean_C(8));
+hSurface=surf(3*sigmaV_8*(x)+mean_V(8),3*sigmaD_8*(y)+mean_D(8),3*sigmaC_8*(z)+mean_C(8));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_9*(x)+mean_V(9),sigma_D_9*(y)+mean_D(9),sigma_C_9*(z)+mean_C(9));
+hSurface=surf(3*sigmaV_9*(x)+mean_V(9),3*sigmaD_9*(y)+mean_D(9),3*sigmaC_9*(z)+mean_C(9));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_10*(x)+mean_V(10),sigma_D_10*(y)+mean_D(10),sigma_C_10*(z)+mean_C(10));
+hSurface=surf(3*sigmaV_10*(x)+mean_V(10),3*sigmaD_10*(y)+mean_D(10),3*sigmaC_10*(z)+mean_C(10));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_11*(x)+mean_V(11),sigma_D_11*(y)+mean_D(11),sigma_C_11*(z)+mean_C(11));
+hSurface=surf(3*sigmaV_11*(x)+mean_V(11),3*sigmaD_11*(y)+mean_D(11),3*sigmaC_11*(z)+mean_C(11));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_12*(x)+mean_V(12),sigma_D_12*(y)+mean_D(12),sigma_C_12*(z)+mean_C(12));
+hSurface=surf(3*sigmaV_12*(x)+mean_V(12),3*sigmaD_12*(y)+mean_D(12),3*sigmaC_12*(z)+mean_C(12));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
-hSurface=surf(sigma_V_13*(x)+mean_V(13),sigma_D_13*(y)+mean_D(13),sigma_C_13*(z)+mean_C(13));
+hSurface=surf(3*sigmaV_13*(x)+mean_V(13),3*sigmaD_13*(y)+mean_D(13),3*sigmaC_13*(z)+mean_C(13));
 set(hSurface,'FaceColor',[0.1 0.8 0.8], 'FaceAlpha',0.5,'EdgeAlpha', 0.2);
 axis equal
 axis([0 1 0 1 0 1])
 view(135,20)
 hold on
-[x,y,z] = sphere(150);
+
 hSurface=surf(x,y,z);
 set(hSurface,'FaceColor',[0.5 0.5 0.5], 'FaceAlpha',0.3,'EdgeAlpha', 0.2);
 xlabel('V')
